@@ -7,46 +7,47 @@ _______________________________________________USING____________________________
  - GulpJS
  - TypeScript
 
-_______________________________________________STEPS_______________________________________________
- Create project's directory > 'mkdir <your-project's-name>'
- Create tsconfig.json > 'touch tsconfig.json'
-    TypeScript compiler configuration
- Add a 'src' directory > 'mkdir src'
- Create package.json inside src > 'npm init -y'
- Install TypeScript > 'npm install typescript --save-dev'
- Install gulp > 'npm install gulp --save-dev'
- Install gulp-typescript > 'npm install gulp-typescript --save-dev'
- Add gulpfile.js to the root directory > 'touch gulpfile.js'
- Install ExpressJS > 'npm install express --save'
- Install Debug > 'npm install debug --save'
- Install types NodeJS > 'npm install @types/node --save-dev'
- Install types ExpressJS > 'npm install @types/express --save-dev'
- Install types Debug > 'npm install @types/debug --save-dev'
- Create index file within source directory > 'touch index.js'
- Add start script to package.json > "scripts": {
-  "start": "node dist/index.js",
-  "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"
-}
- Create App.js within src file > 'touch App.js'
- Install Body Parser > 'npm install body-parser --save'
- Install Morgan > 'npm install morgan --save'
- Install types Body Parser > 'npm install @types/body-parser --save-dev'
- Install types Morgan > 'npm install @types/morgan --save-dev'
- Gulp scripts
- npm start
- Install mocha > 'npm install mocha --save-dev'
- Install chai > 'npm install chai --save-dev'
- Install chai-http > 'npm install chai-http --save-dev'
- Install types mocha > 'npm install @types/mocha --save-dev'
- Install types chai > 'npm install @types/chai --save-dev'
- Install types chai-http > 'npm install @types/chai-http --save-dev'
- Install ts-node > 'npm install ts-node --save-dev'
- Create test folder
- Create file helloWorld.test.ts   
- Run tests > 'npm test'
+_______________________________________________STEPS_______________________________________________</br>
+ Create project's directory > 'mkdir <your-project's-name>'</br>
+ Create tsconfig.json > 'touch tsconfig.json'</br>
+    TypeScript compiler configuration</br>
+ Add a 'src' directory > 'mkdir src'</br>
+ Create package.json inside src > 'npm init -y'</br>
+ Install TypeScript > 'npm install typescript --save-dev'</br>
+ Install gulp > 'npm install gulp --save-dev'</br>
+ Install gulp-typescript > 'npm install gulp-typescript --save-dev'</br>
+ Add gulpfile.js to the root directory > 'touch gulpfile.js'</br>
+ Install ExpressJS > 'npm install express --save'</br>
+ Install Debug > 'npm install debug --save'</br>
+ Install types NodeJS > 'npm install @types/node --save-dev'</br>
+ Install types ExpressJS > 'npm install @types/express --save-dev'</br>
+ Install types Debug > 'npm install @types/debug --save-dev'</br>
+ Create index file within source directory > 'touch index.js'</br>
+ Add start script to package.json > "scripts": {</br>
+  "start": "node dist/index.js",</br>
+  "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"</br>
+}</br>
+ Create App.js within src file > 'touch App.js'</br>
+ Install Body Parser > 'npm install body-parser --save'</br>
+ Install Morgan > 'npm install morgan --save'</br>
+ Install types Body Parser > 'npm install @types/body-parser --save-dev'</br>
+ Install types Morgan > 'npm install @types/morgan --save-dev'</br>
+ Gulp scripts</br>
+ npm start</br>
+ Install mocha > 'npm install mocha --save-dev'</br>
+ Install chai > 'npm install chai --save-dev'</br>
+ Install chai-http > 'npm install chai-http --save-dev'</br>
+ Install types mocha > 'npm install @types/mocha --save-dev'</br>
+ Install types chai > 'npm install @types/chai --save-dev'</br>
+ Install types chai-http > 'npm install @types/chai-http --save-dev'</br>
+ Install ts-node > 'npm install ts-node --save-dev'</br>
+ Create test folder</br>
+ Create file helloWorld.test.ts   </br>
+ Run tests > 'npm test'</br>
 
-______________________________________________CONTENT______________________________________________
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>tsconfig.json
+______________________________________________CONTENT______________________________________________</br>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>tsconfig.json</br>
+```
 {
   "compilerOptions": {
     "target": "es6",
@@ -60,8 +61,10 @@ ______________________________________________CONTENT___________________________
     "node_modules"
   ]
 }
+```
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>gulpfile.js
+```
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
 const JSON_FILES = ['src/*.json', 'src/**/*.json'];
@@ -85,8 +88,10 @@ gulp.task('assets', function() {
 });
 
 gulp.task('default', ['watch', 'assets']);
+```
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>index.ts
+```
 import * as http from 'http';
 import * as debug from 'debug';
 
@@ -131,8 +136,10 @@ function onListening(): void {
   let bind = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
   debug(`Listening on ${bind}`);
 }
+```
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>App.js
+```
 import * as path from 'path';
 import * as express from 'express';
 import * as logger from 'morgan';
@@ -176,8 +183,10 @@ class App {
 }
 
 export default new App().express;
+```
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>helloWorld.test.ts
+```
 import * as mocha from 'mocha';
 import * as chai from 'chai';
 import chaiHttp = require('chai-http');
@@ -204,3 +213,4 @@ describe('baseRoute', () => {
   });
 
 });
+```
