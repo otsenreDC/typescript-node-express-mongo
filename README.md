@@ -46,7 +46,7 @@ _______________________________________________STEPS____________________________
  Run tests > 'npm test'</br>
 
 ______________________________________________CONTENT______________________________________________</br>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>tsconfig.json</br>
+tsconfig.json</br>
 ```
 {
   "compilerOptions": {
@@ -63,7 +63,7 @@ ______________________________________________CONTENT___________________________
 }
 ```
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>gulpfile.js
+gulpfile.js
 ```
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
@@ -90,7 +90,7 @@ gulp.task('assets', function() {
 gulp.task('default', ['watch', 'assets']);
 ```
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>index.ts
+index.ts
 ```
 import * as http from 'http';
 import * as debug from 'debug';
@@ -138,7 +138,7 @@ function onListening(): void {
 }
 ```
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>App.js
+App.js
 ```
 import * as path from 'path';
 import * as express from 'express';
@@ -185,7 +185,7 @@ class App {
 export default new App().express;
 ```
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>helloWorld.test.ts
+helloWorld.test.ts
 ```
 import * as mocha from 'mocha';
 import * as chai from 'chai';
